@@ -21,6 +21,11 @@ Now we can use sshfs to mount the file system locally with the following command
 ```sh
 sudo sshfs -o allow_other,default_permissions root@xxx.xxx.xxx.xxx:/ /mnt/folder_name
 ```
+If you can use rsi_key
+```sh
+sudo sshfs -o allow_other,default_permissions,identityfile=/home/monster/Desktop/ssh/key.pem root@xxx.xxx.xxx.xxx:/ /mnt/folder_name
+```
+
 
 ## Unmounting the Remote File System
 When you no longer need the mount point you can simply unmount it with the command
